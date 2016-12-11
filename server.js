@@ -20,20 +20,39 @@ app.get('/contacts',function(req, res){
 	db.contactlist.find(function(err, result){
 		res.json(result);
 	});
-	/*
-	var customers = [{name:'provas',email:'provasks@gmail.com',contact:'111 111 1111'},{
-  	name:'Mousumi',
-  	email:'titotumpa@gmail.com',
-  	contact:'222 222 2222'
-  }];
-	res.json(customers);
-	*/
 });
+
 app.post('/contacts',function(req, res){
-	debugger;
 	db.contactlist.insert(req.body, function(err, result){
 		res.json(result);
 	});
+});
+
+// app.put('/contacts/:id',function(req, res){
+//     db.contactlist.findAndModify({
+//         query:{_id:mongojs.ObjectId(req.params.id)}, 
+//         update:{$set:{name:req.body.name, email:req.body.email, contact:req.body.contact}}.
+//         new:true
+//     }, function(err, result){
+//         res.json(result);
+//     });
+// });
+
+app.put('/contacts',function(req, res){
+    db.contactlist.findAndModify({
+        query:{_id:mongojs.ObjectId(req.body._id)}, 
+        update:{$set:{name:req.body.name, email:req.body.email, contact:req.body.contact}},
+        new:true
+    },function(err, result){
+        res.json(result);
+    });
+});
+
+
+app.delete('/contacts/:id',function(req, res){
+    db.contactlist.remove({_id:mongojs.ObjectId(req.params.id)}, function(err, result){
+        res.json(result);
+    });
 });
 
 
