@@ -1,20 +1,20 @@
 {
-  "name": "contactsapp",
-  "version": "1.0.0",
-  "description": "Sample Contacts Application",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/npm/npm.git"
-  },
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "*",
-    "nodemon": "^1.11.0"
-  },
-  "author": "Provas Saha",
-  "license": "ISC"
+    "name": "contactsapp",
+    "version": "1.0.0",
+    "description": "Sample Contacts Application",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/npm/npm.git"
+    },
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "express": "*",
+        "nodemon": "^1.11.0"
+    },
+    "author": "Provas Saha",
+    "license": "ISC"
 }

@@ -1,48 +1,48 @@
 <!doctype html>
 <html ng-app="universityApp">
-    <head>
-        <title ng-bind="metaservice.metaTitle()"></title>
-        <meta name="Description" content="{{ metaservice.metaDescription() }}">
-        <meta name="keywords" content="{{ metaservice.metaKeywords() }}" />
 
-        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
+<head>
+    <title ng-bind="metaservice.metaTitle()"></title>
+    <meta name="Description" content="{{ metaservice.metaDescription() }}">
+    <meta name="keywords" content="{{ metaservice.metaKeywords() }}" />
 
-    <body >
-        <div class="container">
-            <header class="main"><h1>{{ metaservice.metaTitle() }}</h1></header>
-            <nav>
-                <ul>
-                    <li><a href="#/home">Home</a></li>
-                    <li>
-                        <a href="#">Masters <span class="caret"></span></a>
-                        <div>
-                            <ul>
-                                <li><a href="#/students">Students</a></li>
-                                <li><a href="#/teachers">Teachers</a></li>
-                                <li><a href="#/users">Users</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#/about">About</a></li>
-                    <li><a href="#/help">Help</a></li>
-                </ul>
-            </nav>
-            <div ng-view />
-        </div>
-        <script src="angular-1.4.8/angular.min.js"></script>
-        <script src="angular-1.4.8//angular-route.min.js"></script>
-        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"> </script>
-                    <!-- <script src="angular-1.4.8/angular-animate.min.js"></script>
-        <script src="angular-1.4.8/angular-touch.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script> -->
-        <script src="app.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 
-        <script src="services/MetaService.js"></script>
+<body>
+    <div class="container">
+        <header class="main">
+            <h1>{{ metaservice.metaTitle() }}</h1></header>
+        <nav>
+            <ul>
+                <li><a href="#/home">Home</a></li>
+                <li>
+                    <a href="#">Masters <span class="caret"></span></a>
+                    <div>
+                        <ul>
+                            <li><a href="#/students">Students</a></li>
+                            <li><a href="#/teachers">Teachers</a></li>
+                            <li><a href="#/users">Users</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/help">Help</a></li>
+            </ul>
+        </nav>
+        <div ng-view />
+    </div>
+    <script src="angular-1.4.8/angular.min.js"></script>
+    <script src="angular-1.4.8//angular-route.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js">
+    </script>
+    <script src="app.js"></script>
+    <script src="services/MetaService.js"></script>
+    <script src="services/CommonService.js"></script>
 
+    <script src="home/HomeController.js"></script>
+    <script src="students/StudentController.js"></script>
+</body>
 
-        <script src="home/HomeController.js"></script>
-        <script src="students/StudentController.js"></script>
-    </body>
 </html>
