@@ -11,7 +11,7 @@ universityApp.controller('StudentController', ['$scope', '$http', 'CommonService
     };
 
     $scope.addStudent = function() {
-        //delete $scope.student._id;
+        delete $scope.student._id;
         $http.post('/students', $scope.student).then(function(resp) {
             $scope.students.push(resp.data);
         }, function(resp) {

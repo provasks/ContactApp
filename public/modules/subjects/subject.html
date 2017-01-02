@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <TH>Code</TH>
+            <TH>Name</TH>
+            <TH>Credit</TH>
+        </tr>
+    </thead>
+    <tbody>
+        <TR>
+            <TD><input class="form-control" ng-model="subject.code"></TD>
+            <TD><input class="form-control" ng-model="subject.name"></TD>
+            <TD><input class="form-control" ng-model="subject.credit"></TD>
+            <TD>
+                <button class="btn btn-primary" ng-click="addSubject()">Add</button>
+                <button class="btn btn-warning" ng-click="updateSubject()">Update</button>
+            </TD>
+        </TR>
+        <TR ng-repeat='subject in subjects track by $index'>
+            <TD>{{subject.code}}</TD>
+            <TD>{{subject.name}}</TD>
+            <TD>{{subject.credit}}</TD>
+            <TD>
+                <button class="btn btn-info" ng-click="editSubject(subject)">Edit</button>
+                <button class="btn btn-danger" ng-click="removeSubject(subject._id)">Remove</button>
+            </TD>
+        </TR>
+    </tbody>
+</table>
